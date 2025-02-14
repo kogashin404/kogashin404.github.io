@@ -1,4 +1,4 @@
-/* リセットと基本スタイル */
+/* 全体のリセット */
 body, h1, h2, p, div, img {
     margin: 0;
     padding: 0;
@@ -15,7 +15,62 @@ body, h1, h2, p, div, img {
     }
 }
 
-/* リンクにアニメーションを追加 */
+/* 背景とページ全体のスタイル */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    animation: fadeIn 1s ease-in-out;
+    background-color: #f4f4f4;
+}
+
+/* ヘッダーのスタイル */
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #444;
+}
+
+/* メインコンテンツのスタイル */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* セクションごとのスタイル */
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #555;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* 画像のスタイル */
+.hobby-image, .activity-image, .packer-image {
+    width: 80%; /* 画像を横幅80%に */
+    max-width: 600px; /* 最大幅600px */
+    display: block;
+    margin: 20px auto; /* 中央寄せ */
+    border-radius: 10px; /* 角を丸くする */
+    object-fit: cover; /* アスペクト比を維持して表示 */
+}
+
+/* リンクのスタイル */
 .transition-link {
     color: #007BFF;
     text-decoration: none;
@@ -26,16 +81,23 @@ body, h1, h2, p, div, img {
     color: #0056b3;
 }
 
-/* 背景とセクションにアニメーションを追加 */
-body {
-    animation: fadeIn 1s ease-in-out;
-}
-
-/* ページ全体 */
-main {
-    animation: fadeIn 1.5s ease-in-out;
-}
-
+/* フッターのスタイル */
 footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 0.9em;
     animation: fadeIn 2s ease-in-out;
+}
+
+/* PACKER紹介セクションのスタイル */
+#packer-introduction {
+    text-align: center;
+}
+
+#packer-introduction p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #333;
 }
