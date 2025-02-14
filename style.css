@@ -1,0 +1,102 @@
+/* 全体のリセット */
+body, h1, h2, p, div, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 全体スタイル */
+body {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    position: relative;
+}
+
+/* 背景画像 */
+.background {
+    background: url('background.jpg') center/cover no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: brightness(0.8); /* 背景を暗く調整 */
+}
+
+/* ヘッダー */
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #444;
+}
+
+/* メインセクション */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 各セクション */
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #555;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+p {
+    margin-bottom: 10px;
+    font-size: 1em;
+    line-height: 1.8;
+}
+
+/* 画像のスタイル */
+.hobby-image, .activity-image {
+    width: 100%; /* レスポンシブ対応 */
+    max-width: 300px; /* 最大幅 */
+    height: auto; /* 高さは自動調整 */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 0.9em;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+}
