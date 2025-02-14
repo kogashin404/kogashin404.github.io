@@ -5,26 +5,27 @@ body, h1, h2, p, div, img {
     box-sizing: border-box;
 }
 
-/* フェードインのアニメーション */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* 背景とページ全体のスタイル */
+/* 全体スタイル */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', 'Arial', sans-serif;
     color: #333;
     line-height: 1.6;
-    animation: fadeIn 1s ease-in-out;
-    background-color: #f4f4f4;
+    position: relative;
 }
 
-/* ヘッダーのスタイル */
+/* 背景画像 */
+.background {
+    background: url('background.jpg') center/cover no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: brightness(0.8); /* 背景を暗く調整 */
+}
+
+/* ヘッダー */
 header {
     text-align: center;
     padding: 20px;
@@ -36,7 +37,7 @@ header h1 {
     color: #444;
 }
 
-/* メインコンテンツのスタイル */
+/* メインセクション */
 main {
     max-width: 800px;
     margin: 20px auto;
@@ -44,10 +45,9 @@ main {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 1.5s ease-in-out;
 }
 
-/* セクションごとのスタイル */
+/* 各セクション */
 section {
     margin-bottom: 30px;
 }
@@ -60,44 +60,53 @@ section h2 {
     padding-bottom: 5px;
 }
 
+p {
+    margin-bottom: 10px;
+    font-size: 1em;
+    line-height: 1.8;
+}
+
 /* 画像のスタイル */
-.hobby-image, .activity-image, .packer-image {
-    width: 80%; /* 画像を横幅80%に */
-    max-width: 600px; /* 最大幅600px */
+.hobby-image, .activity-image {
+    width: 100%; /* レスポンシブ対応 */
+    max-width: 300px; /* 最大幅 */
+    height: auto; /* 高さは自動調整 */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
     display: block;
-    margin: 20px auto; /* 中央寄せ */
-    border-radius: 10px; /* 角を丸くする */
-    object-fit: cover; /* アスペクト比を維持して表示 */
 }
 
-/* リンクのスタイル */
-.transition-link {
-    color: #007BFF;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-}
-
-.transition-link:hover {
-    color: #0056b3;
-}
-
-/* フッターのスタイル */
+/* フッター */
 footer {
     text-align: center;
     margin-top: 20px;
     padding: 10px;
     background: rgba(255, 255, 255, 0.8);
     font-size: 0.9em;
-    animation: fadeIn 2s ease-in-out;
 }
 
-/* PACKER紹介セクションのスタイル */
-#packer-introduction {
-    text-align: center;
+/* リンクのスタイル */
+a {
+    color: #007BFF;
+    text-decoration: none;
 }
 
-#packer-introduction p {
-    font-size: 1.1em;
-    line-height: 1.8;
-    color: #333;
+a:hover {
+    text-decoration: underline;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
 }
